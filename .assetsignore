@@ -1,0 +1,13 @@
+node_modules/
+node_modules
+.git/
+.git
+.github/
+.github
+scripts/
+scripts
+package.json
+package-lock.json
+Specification.md
+.gitignore
+.assetsignore
