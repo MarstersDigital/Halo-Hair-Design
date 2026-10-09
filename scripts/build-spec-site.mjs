@@ -362,35 +362,67 @@ function generateIndexHtml() {
           <p style="color: var(--color-text-secondary); font-size: 0.95rem;">Every appointment begins with a personal consultation to match your hair type, maintenance routine, and lifestyle.</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.75rem;">
-          <div style="background: var(--color-canvas); padding: 1.75rem; border-radius: 1rem; border: 1px solid var(--color-border);">
-            <div style="color: var(--color-accent); font-size: 1.6rem; margin-bottom: 0.75rem;">✂️</div>
-            <h3 style="font-size: 1.25rem; margin-bottom: 0.4rem;">Precision Cutting &amp; Restyling</h3>
-            <p style="font-size: 0.88rem; color: var(--color-text-secondary); line-height: 1.6;">
+        <div class="pillars-grid">
+          <!-- Pillar 1: Cutting -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="6" cy="6" r="3"></circle>
+                <circle cx="6" cy="18" r="3"></circle>
+                <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
+                <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
+                <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <h3>Precision Cutting &amp; Restyling</h3>
+            <p>
               From tailored maintenance trims and bouncy blow waves to complete transformation restyles and gents scissor work.
             </p>
           </div>
 
-          <div style="background: var(--color-canvas); padding: 1.75rem; border-radius: 1rem; border: 1px solid var(--color-border);">
-            <div style="color: var(--color-accent); font-size: 1.6rem; margin-bottom: 0.75rem;">🎨</div>
-            <h3 style="font-size: 1.25rem; margin-bottom: 0.4rem;">Dimensional Colour &amp; Balayage</h3>
-            <p style="font-size: 0.88rem; color: var(--color-text-secondary); line-height: 1.6;">
+          <!-- Pillar 2: Colour -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2C6.5 2 2 6.5 2 12c0 3.6 2 6.8 5 8.5.5.3 1.1-.1 1.1-.7v-1.1c0-1.1.9-2 2-2h1.4c2.5 0 4.5-2 4.5-4.5 0-.6.5-1.2 1.2-1.2h.8c2.2 0 4-1.8 4-4 0-4-4.5-7-10-7z"></path>
+                <circle cx="7.5" cy="10.5" r="1.5" fill="currentColor"></circle>
+                <circle cx="12" cy="7.5" r="1.5" fill="currentColor"></circle>
+                <circle cx="16.5" cy="10.5" r="1.5" fill="currentColor"></circle>
+              </svg>
+            </div>
+            <h3>Dimensional Colour &amp; Balayage</h3>
+            <p>
               Full and half-head highlights, sun-kissed face-framing money pieces, custom gloss toners, and bespoke balayage.
             </p>
           </div>
 
-          <div style="background: var(--color-canvas); padding: 1.75rem; border-radius: 1rem; border: 1px solid var(--color-border);">
-            <div style="color: var(--color-accent); font-size: 1.6rem; margin-bottom: 0.75rem;">✨</div>
-            <h3 style="font-size: 1.25rem; margin-bottom: 0.4rem;">Great Lengths Extensions</h3>
-            <p style="font-size: 0.88rem; color: var(--color-text-secondary); line-height: 1.6;">
+          <!-- Pillar 3: Extensions -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m12 3-1.9 6.1L4 11l6.1 1.9L12 19l1.9-6.1L20 11l-6.1-1.9L12 3z"></path>
+                <path d="M19 3v4"></path>
+                <path d="M21 5h-4"></path>
+              </svg>
+            </div>
+            <h3>Great Lengths Extensions</h3>
+            <p>
               Certified ethical 100% human hair extensions applied with precision bonds to deliver natural volume, thickness, and length.
             </p>
           </div>
 
-          <div style="background: var(--color-canvas); padding: 1.75rem; border-radius: 1rem; border: 1px solid var(--color-border);">
-            <div style="color: var(--color-accent); font-size: 1.6rem; margin-bottom: 0.75rem;">💅</div>
-            <h3 style="font-size: 1.25rem; margin-bottom: 0.4rem;">EKM Beauty Suite Inside</h3>
-            <p style="font-size: 0.88rem; color: var(--color-text-secondary); line-height: 1.6;">
+          <!-- Pillar 4: EKM Beauty -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 2h6v5H9z"></path>
+                <path d="M6 7h12a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2z"></path>
+                <line x1="9" y1="12" x2="15" y2="12"></line>
+                <line x1="12" y1="7" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <h3>EKM Beauty Suite Inside</h3>
+            <p>
               Enjoy the convenience of multi-treatment visits with Ellie’s BIAB builder gel nails, lash lifts, and brow lamination in-salon.
             </p>
           </div>
