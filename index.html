@@ -197,16 +197,35 @@
             </div>
           </div>
 
-          <!-- Compact Framed Vignette (STRICTLY CONSTRAINED to max 360px wide) -->
-          <div style="display: flex; justify-content: center;">
-            <div class="photo-vignette-compact">
+          <!-- Visual Showcase Cluster (Storefront, Team Selfie & Matrix Haircare) -->
+          <div class="hero-visual-cluster">
+            <!-- Main Storefront Card (No text underneath) -->
+            <div class="hero-card hero-card-main">
               <picture>
-                <source srcset="images/storefront.webp" type="image/webp">
-                <img src="images/storefront.jpg" alt="Halo Hair Design salon exterior at 59 Kirkgate, Otley" width="360" height="270" loading="eager">
+                <source srcset="images/hero-storefront.webp" type="image/webp">
+                <img src="images/hero-storefront.jpg" alt="Halo Hair Design boutique salon exterior at 59 Kirkgate, Otley" width="800" height="600" loading="eager">
               </picture>
-              <div style="padding: 0.75rem 0.5rem 0.25rem; text-align: center;">
-                <div style="font-family: var(--font-serif); font-size: 1.1rem; font-weight: 600; color: #1E142B;">59 Kirkgate, Otley</div>
-                <div style="font-size: 0.78rem; color: #5B4E6C;">Directly on Kirkgate high street with on-street bays</div>
+              <span class="hero-card-chip">📍 59 Kirkgate</span>
+            </div>
+
+            <!-- Two Companion Cards: Team & Products -->
+            <div class="hero-cards-row">
+              <!-- Team Card -->
+              <div class="hero-card hero-card-sub">
+                <picture>
+                  <source srcset="images/hero-team.webp" type="image/webp">
+                  <img src="images/hero-team.jpg" alt="The welcoming styling team at Halo Hair Design" width="600" height="450" loading="eager">
+                </picture>
+                <span class="hero-card-chip">👋 Our Friendly Team</span>
+              </div>
+
+              <!-- Matrix Products Card -->
+              <div class="hero-card hero-card-sub">
+                <picture>
+                  <source srcset="images/hero-products.webp" type="image/webp">
+                  <img src="images/hero-products.jpg" alt="Matrix Total Results and luxury salon haircare at Halo Hair Design" width="600" height="450" loading="eager">
+                </picture>
+                <span class="hero-card-chip">✨ Matrix &amp; K18 Care</span>
               </div>
             </div>
           </div>
@@ -515,7 +534,7 @@
 
   <style>
     @media (min-width: 820px) {
-      .intro-grid { grid-template-columns: 1.2fr 0.8fr !important; }
+      .intro-grid { grid-template-columns: 1.08fr 0.92fr !important; }
       .location-snapshot-grid { grid-template-columns: 1.15fr 0.85fr !important; }
     }
   </style>
