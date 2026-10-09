@@ -1,0 +1,12 @@
+{
+  "name": "halo-hair-design",
+  "version": "1.0.0",
+  "description": "Boutique high-street hair salon in Otley (incorporating EKM Beauty)",
+  "scripts": {
+    "build": "node scripts/build-spec-site.mjs",
+    "images": "node scripts/prepare-images.mjs"
+  },
+  "dependencies": {
+    "sharp": "^0.35.5"
+  }
+}

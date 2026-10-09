@@ -1,0 +1,604 @@
+/* ==========================================================================
+   HALO HAIR DESIGN — LOGO MATCHED PALETTE & TYPOGRAPHY
+   59 Kirkgate, Otley, West Yorkshire, LS21 3HN
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Logo Matched Palette */
+  --color-canvas: #FAF8FD;          /* Soft crisp porcelain with ethereal violet whisper */
+  --color-card: #FFFFFF;            /* Pure crisp white */
+  --color-card-subtle: #F5F0FB;     /* Soft lilac tinted surface */
+  --color-text-primary: #1E142B;    /* Deep obsidian with subtle plum depth */
+  --color-text-secondary: #655A73;  /* Sophisticated muted heather slate */
+  
+  /* Official Logo Purple & Halo Ring Lilac */
+  --color-accent: #4B1C8E;          /* Rich Royal Purple from 'Halo' */
+  --color-accent-hover: #38126F;    /* Deep Royal Purple Hover */
+  --color-accent-light: #F3EEF9;    /* Gentle lilac wash for pills */
+  --color-ring-lilac: #D1C4E2;      /* Signature Lilac from the Halo Ring */
+  --color-ring-subtle: #E2D7EE;
+  --color-border: #E8DFEE;          /* Clean soft lavender-stone divider */
+  --color-border-dark: #D4C4DE;
+
+  /* Typography Matching 'HAIR DESIGN' */
+  --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Refined Modern Shadows with subtle purple glow */
+  --shadow-subtle: 0 2px 8px rgba(30, 20, 43, 0.04);
+  --shadow-card: 0 6px 20px rgba(30, 20, 43, 0.05), 0 1px 3px rgba(30, 20, 43, 0.02);
+  --shadow-floating: 0 16px 36px rgba(75, 28, 142, 0.08), 0 4px 12px rgba(30, 20, 43, 0.04);
+
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-sans);
+  background-color: var(--color-canvas);
+  color: var(--color-text-primary);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-canvas);
+  color: var(--color-text-primary);
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+/* Headings matched to 'HAIR DESIGN' Geometric Typography */
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-heading);
+  color: var(--color-text-primary);
+  line-height: 1.18;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+p, span, li, a, button, input, textarea, select {
+  font-family: var(--font-sans);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container Constraint */
+.container-custom {
+  width: 100%;
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-custom {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+}
+
+/* Primary CTA Buttons (Halo Purple) */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+  padding: 0.85rem 1.75rem;
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(75, 28, 142, 0.28);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(75, 28, 142, 0.38);
+  color: #FFFFFF;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #FFFFFF;
+  color: var(--color-accent);
+  padding: 0.85rem 1.75rem;
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  border-radius: 9999px;
+  border: 1.5px solid var(--color-border);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-accent);
+  background-color: var(--color-accent-light);
+  transform: translateY(-1px);
+}
+
+/* Badges with Logo Purple & Lilac Accents */
+.badge-purple {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: var(--color-accent-light);
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  border: 1px solid var(--color-ring-lilac);
+}
+
+.badge-lilac {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: #FAF6FD;
+  color: var(--color-text-secondary);
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  border: 1px solid var(--color-border);
+}
+
+/* Header & Sticky Nav */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgba(250, 248, 253, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nav-link {
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--color-text-secondary);
+  padding: 0.45rem 0.9rem;
+  border-radius: 9999px;
+  transition: all var(--transition-fast);
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--color-accent);
+  background-color: var(--color-accent-light);
+  font-weight: 700;
+}
+
+/* Compact Photo Vignettes */
+.photo-vignette-compact {
+  max-width: 360px;
+  width: 100%;
+  border-radius: 1.25rem;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-card);
+  padding: 0.5rem;
+  box-shadow: var(--shadow-card);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.photo-vignette-compact img {
+  border-radius: 0.85rem;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.photo-vignette-portrait {
+  max-width: 340px;
+  width: 100%;
+  border-radius: 1.25rem;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-card);
+  padding: 0.5rem;
+  box-shadow: var(--shadow-card);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.photo-vignette-portrait img {
+  border-radius: 0.85rem;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* Hero Section (Matched to Halo Ring Lilac from Logo) */
+.hero-section {
+  padding: 4.75rem 0 4rem;
+  background-color: var(--color-ring-lilac);
+  background: linear-gradient(165deg, #DDD2EB 0%, #D1C4E2 50%, #C9BCDC 100%);
+  border-bottom: 1px solid rgba(75, 28, 142, 0.14);
+}
+
+/* Page Lilac Background (Matched to Hero Background from Logo) */
+.page-lilac-bg {
+  background-color: var(--color-ring-lilac);
+  background: linear-gradient(165deg, #DDD2EB 0%, #D1C4E2 50%, #C9BCDC 100%);
+  flex-grow: 1;
+}
+
+.hero-section h1 {
+  color: #1E142B;
+}
+
+.hero-section .hero-desc {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: #382D46;
+  max-width: 580px;
+  margin-bottom: 2rem;
+}
+
+.badge-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: #FFFFFF;
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(75, 28, 142, 0.22);
+  box-shadow: 0 2px 6px rgba(75, 28, 142, 0.06);
+}
+
+.badge-hero-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: rgba(255, 255, 255, 0.75);
+  color: #382D46;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(75, 28, 142, 0.18);
+}
+
+.hero-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #382D46;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(75, 28, 142, 0.18);
+}
+
+.hero-section .photo-vignette-compact {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(75, 28, 142, 0.18);
+  box-shadow: 0 10px 28px rgba(75, 28, 142, 0.12);
+}
+
+/* Continuous Marquee Banner (Right to Left) */
+@keyframes marqueeLeft {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+.marquee-section {
+  width: 100%;
+  overflow: hidden;
+  padding: 3rem 0;
+  background-color: var(--color-ring-lilac);
+  background: linear-gradient(165deg, #DDD2EB 0%, #D1C4E2 50%, #C9BCDC 100%);
+  border-top: 1px solid rgba(75, 28, 142, 0.14);
+  border-bottom: 1px solid rgba(75, 28, 142, 0.14);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 1.25rem;
+  will-change: transform;
+  animation: marqueeLeft 34s linear infinite;
+}
+
+.marquee-section:hover .marquee-track,
+.marquee-track.is-paused {
+  animation-play-state: paused;
+}
+
+.marquee-card {
+  flex: 0 0 auto;
+  width: 210px;
+  aspect-ratio: 1 / 1;
+  border-radius: 1.15rem;
+  overflow: hidden;
+  position: relative;
+  border: 1.5px solid var(--color-border);
+  background-color: #FFFFFF;
+  box-shadow: var(--shadow-subtle);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.marquee-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-ring-lilac);
+  box-shadow: var(--shadow-card);
+}
+
+.marquee-card img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: auto;
+}
+
+.marquee-card-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.25rem 0.75rem 0.6rem;
+  background: linear-gradient(to top, rgba(20, 10, 32, 0.9) 0%, rgba(20, 10, 32, 0.4) 65%, transparent 100%);
+  color: #FFFFFF;
+}
+
+.marquee-card-tag {
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-ring-lilac);
+}
+
+.marquee-card-title {
+  font-family: var(--font-heading);
+  font-size: 0.825rem;
+  line-height: 1.25;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+/* Portfolio Cards (gallery.html) */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 275px));
+  gap: 1.75rem;
+  justify-content: center;
+}
+
+.gallery-card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: 1.25rem;
+  padding: 0.75rem;
+  box-shadow: var(--shadow-subtle);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card);
+  border-color: var(--color-ring-lilac);
+}
+
+.gallery-card-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 0.85rem;
+  overflow: hidden;
+  background-color: var(--color-canvas);
+  margin-bottom: 0.75rem;
+}
+
+.gallery-card-img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 0.85rem;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: auto;
+  transition: transform var(--transition-normal);
+}
+
+.gallery-card:hover .gallery-card-img {
+  transform: scale(1.03);
+}
+
+/* Service Pricing Rows (services.html) */
+.price-menu-group {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  box-shadow: var(--shadow-subtle);
+}
+
+.price-item-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 0.85rem 0;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.price-item-row:last-child {
+  border-bottom: none;
+}
+
+.price-item-name {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.price-item-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.15rem;
+}
+
+.price-item-val {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--color-accent);
+  white-space: nowrap;
+  margin-left: 1.25rem;
+}
+
+.policy-card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-accent);
+  border-radius: 0.85rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--shadow-subtle);
+}
+
+/* Mobile Fixed Bottom Bar (< 768px) */
+.mobile-bottom-bar {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 5.5rem;
+  }
+
+  .mobile-bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 45;
+    background: rgba(250, 248, 253, 0.98);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid var(--color-border);
+    padding: 0.65rem 1rem;
+    padding-bottom: calc(0.65rem + env(safe-area-inset-bottom, 0px));
+    display: flex;
+    box-shadow: 0 -4px 16px rgba(30, 20, 43, 0.06);
+  }
+
+  .mobile-book-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    background: var(--color-accent);
+    color: #FFFFFF;
+    border: 1.5px solid var(--color-accent);
+    border-radius: 9999px;
+    padding: 0.85rem 1rem;
+    font-family: var(--font-heading);
+    font-size: 0.925rem;
+    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(75, 28, 142, 0.3);
+  }
+}
+
+/* Mobile Navigation Drawer */
+.mobile-drawer {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 10, 32, 0.45);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+}
+
+.mobile-drawer.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-drawer-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background: #FFFFFF;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform var(--transition-normal);
+  box-shadow: -10px 0 30px rgba(30, 20, 43, 0.1);
+}
+
+.mobile-drawer.open .mobile-drawer-panel {
+  transform: translateX(0);
+}
