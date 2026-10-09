@@ -13,7 +13,7 @@ async function prepareImages() {
   console.log('--- Preparing Halo Hair Design High-Fidelity Assets ---');
 
   // 1. Process Official Logo (Transparent PNGs + JPG)
-  const logoSrc = path.join(ROOT_DIR, 'Images', 'Halo Hair Design Logo.jpg');
+  const logoSrc = path.join(ROOT_DIR, 'images', 'Halo Hair Design Logo.jpg');
   if (fs.existsSync(logoSrc)) {
     try {
       const image = sharp(logoSrc);
@@ -97,7 +97,7 @@ async function prepareImages() {
   }
 
   // 2. Shop front (Storefront) - compact 800x600 for retina displays
-  const shopFrontSrc = path.join(ROOT_DIR, 'Images', 'Shop Front.jpg');
+  const shopFrontSrc = path.join(ROOT_DIR, 'images', 'Shop Front.jpg');
   if (fs.existsSync(shopFrontSrc)) {
     await sharp(shopFrontSrc)
       .resize(800, 600, { fit: 'cover', position: 'center' })
@@ -115,7 +115,7 @@ async function prepareImages() {
   }
 
   // 3. Salon interior - compact 720x960 for retina displays
-  const interiorSrc = path.join(ROOT_DIR, 'Images', 'Salon Interior.png');
+  const interiorSrc = path.join(ROOT_DIR, 'images', 'Salon Interior.png');
   if (fs.existsSync(interiorSrc)) {
     await sharp(interiorSrc)
       .resize(720, 960, { fit: 'cover', position: 'center' })
@@ -133,7 +133,7 @@ async function prepareImages() {
   }
 
   // 4. Reference price list image
-  const priceSrc = path.join(ROOT_DIR, 'Images', 'Source', 'price-list-source.jpg');
+  const priceSrc = path.join(ROOT_DIR, 'images', 'Source', 'price-list-source.jpg');
   if (fs.existsSync(priceSrc)) {
     fs.copyFileSync(priceSrc, path.join(IMAGES_DIR, 'price-list-source.jpg'));
     console.log('✓ Copied price-list-source.jpg');
@@ -155,7 +155,7 @@ async function prepareImages() {
   for (const def of headshotDefs) {
     let sourcePath = null;
     for (const name of def.inNames) {
-      const candidate = path.join(ROOT_DIR, 'Images', name);
+      const candidate = path.join(ROOT_DIR, 'images', name);
       if (fs.existsSync(candidate)) {
         sourcePath = candidate;
         break;
